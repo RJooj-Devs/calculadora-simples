@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calCUladora</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <div class="container">
+        <div id="calc">
+            <div id="display">
+                <div class="calc-display">
+                    <i class="fas fa-history icon"></i><span class="calc">0</span>
+                </div>
+                <div class="main-display">
+                    <p class="output">0</p>
+                </div>
+            </div>
+            <div id="buttons">
+                <div class="row">
+                    <button class="func-btn" name="op-par" value="("  onclick="digit(this.value)">(</button>
+                    <button class="func-btn" name="cls-par" value=")" onclick="digit(this.value)">)</button>
+                    <button class="func-btn" name="pc-func" value="%" onclick="digit(this.value)">%</button>
+                    <button class="func-btn" name="ac-func" >AC</button>
+                </div>
+                <div class="row">
+                    <button class="num-btn" name="sev-num" value="7" onclick="digit(this.value)">7</button>
+                    <button class="num-btn" name="eig-num" value="8" onclick="digit(this.value)">8</button>
+                    <button class="num-btn" name="nin-num" value="9" onclick="digit(this.value)">9</button>
+                    <button class="func-btn" name="div-func" value="/" onclick="digit(this.value)">/</button>
+                </div>
+                <div class="row">
+                    <button class="num-btn" name="for-num" value="4" onclick="digit(this.value)">4</button>
+                    <button class="num-btn" name="fiv-num" value="5" onclick="digit(this.value)">5</button>
+                    <button class="num-btn" name="six-num" value="6" onclick="digit(this.value)">6</button>
+                    <button class="func-btn" name="mult-func" value="x" onclick = "digit(this.value)">X</button>
+                </div>
+                <div class="row">
+                    <button class="num-btn" name="one-num" value="1" onclick = "digit(this.value)">1</button>
+                    <button class="num-btn" name="two-num" value="2" onclick = "digit(this.value)">2</button>
+                    <button class="num-btn" name="thr-num" value="3 " onclick = "digit(this.value)">3</button>
+                    <button class="func-btn" name="min-func" value="-" onclick = "digit(this.value)">-</button>
+                </div>
+                <div class="row">
+                    <button class="num-btn" name="zer-num" value="0" onclick = "digit(this.value)">0</button>
+                    <button class="num-btn" name="dot-num" value="." onclick = "digit(this.value)">.</button>
+                    <button class="eq-btn" name="eq-func" >=</button>
+                    <button class="func-btn" name="plus-func" value="+" onclick = "digit(this.value)">+</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/ff704cad7d.js" crossorigin="anonymous"></script>
+</body>
+</html>

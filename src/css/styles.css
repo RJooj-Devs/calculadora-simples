@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100;1,500&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    text-align: center;
+}
+.container{
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
+#calc{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 14px;
+    padding: 12px;
+    background-color: grey;
+}
+#display{
+    text-align: center;
+    width: 450px;
+    height: 50px;
+    border-radius: 20vh;
+    border: 2px rgb(197, 197, 197) solid;
+    background-color: rgb(255, 255, 255);
+    margin:auto;
+    margin-top: 30px;
+}
+.calc-display{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icon{
+    margin-left: 13px;
+    margin-top: 6px;
+}
+.calc{
+    margin-top: 6px;
+    margin-right: 13px;
+    font-size: 12px;
+    font-style: italic;
+    color: grey;
+}
+.output{
+    margin: 0 13px 0 0;
+    font-size: 25px;
+}
+.main-display{
+    text-align: right;
+    margin: 0;
+}
+button{
+    width: 81px;
+    height: 35px;
+    border:none;
+    outline: none;
+    
+    margin: 4px;
+    border-radius: 15vh;
+    cursor: pointer;
+}
+#buttons{
+    text-align: center;
+    margin: 30px;
+    width: 450px;
+}
+.eq-btn{
+    background-color: rgb(0, 109, 211);
+    color: white;
+    transition: 0.35s;
+}
+.eq-btn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+.func-btn{
+    background-color: rgb(218, 98, 0);
+    color: white;
+    transition: 0.35s;
+}
+.func-btn:hover{
+    background-color: rgb(0, 109, 211);
+    transform: scale(1.2);
+}
+.num-btn{
+    transition: 0.34s;
+}
+.num-btn:hover{
+    transform: scale(1.2);
+
+}
