@@ -6,13 +6,36 @@ const elements = {
 
     //
 }
+let ac = document.getElementsByName('ac-func')[0]
+ac.addEventListener('click', clear)
+
+let calcs = []
+let currCalc = []
+
+renderDisplay()
 
 function digit(val)
 {
-    if(elements.calcDisplay.innerHTML == '0')
-    {
-        elements.calcDisplay.innerHTML = val
+    currCalc.push(val)
+   renderDisplay(val)
+}
+
+function clear(){
+    currCalc.splice(currCalc.length-1, 1)
+    renderDisplay()
+}
+function renderDisplay(val){
+    if(currCalc.length == 0){
+        elements.output.innerHTML = '0'
     } else{
-        elements.calcDisplay.innerHTML += val
+        elements.output.innerHTML = ''
+        for(i in currCalc)
+        {  
+            elements.output.innerHTML += currCalc[i]
+        }
     }
+}
+function calculate()
+{
+    
 }
