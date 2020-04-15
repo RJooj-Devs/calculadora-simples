@@ -15,9 +15,15 @@ let values = []
 
 renderDisplay()
 
-function digit(val)
+function digit(val, type, name)
 {
-    currCalc.push(val)
+    if(currCalc.length == 0 && type == "func-btn" || currCalc.length == 0 && val == '.'){
+        currCalc.push(0, val)
+    }else{
+        
+        currCalc.push(val)
+    }
+    
    renderDisplay(val)
 }
 
@@ -26,15 +32,16 @@ function clear(){
     renderDisplay()
     
 }
-function renderDisplay(val){
-    if(currCalc.length == 0){
+function renderDisplay(val, type){
+    if(currCalc.length == 0 && type != "func-btn"){
         elements.output.innerHTML = '0'
-    } else{
+    } else {
         elements.output.innerHTML = ''
         for(i in currCalc)
         {  
             elements.output.innerHTML += currCalc[i]
         }
+        console.log(currCalc)
     }
 }
 function calculate()
