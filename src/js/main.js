@@ -11,6 +11,7 @@ ac.addEventListener('click', clear)
 
 let calcs = []
 let currCalc = []
+let values = []
 
 renderDisplay()
 
@@ -23,6 +24,7 @@ function digit(val)
 function clear(){
     currCalc.splice(currCalc.length-1, 1)
     renderDisplay()
+    
 }
 function renderDisplay(val){
     if(currCalc.length == 0){
@@ -37,5 +39,5 @@ function renderDisplay(val){
 }
 function calculate()
 {
-    
+
 }
