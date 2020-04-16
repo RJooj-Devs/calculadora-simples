@@ -20,34 +20,34 @@
             </div>
             <div id="buttons">
                 <div class="row">
-                    <button class="func-btn name="op-par" value="("  onclick="digit(this.value, this.className, this.name)">(</button>
-                    <button class="func-btn" name="cls-par" value=")" onclick="digit(this.value, this.className, this.name)">)</button>
-                    <button class="func-btn" name="pc-func" value="%" onclick="digit(this.value, this.className, this.name)">%</button>
+                    <button class="func-btn name="op-par" value="("  onclick="digitNumber(this.value, this.className, this.name)">(</button>
+                    <button class="func-btn" name="cls-par" value=")" onclick="digitFunc(this.value)">)</button>
+                    <button class="func-btn" name="pc-func" value="%" onclick="digitFunc(this.value)">%</button>
                     <button class="func-btn" name="ac-func" >AC</button>
                 </div>
                 <div class="row">
-                    <button class="num-btn" name="sev-num" value="7" onclick="digit(this.value, this.className, this.name)">7</button>
-                    <button class="num-btn" name="eig-num" value="8" onclick="digit(this.value, this.className, this.name)">8</button>
-                    <button class="num-btn" name="nin-num" value="9" onclick="digit(this.value, this.className, this.name)">9</button>
-                    <button class="func-btn" name="div-func" value="/" onclick="digit(this.value, this.className, this.name)">/</button>
+                    <button class="num-btn" name="sev-num" value="7" onclick="digitNumber(this.value, this.className, this.name)">7</button>
+                    <button class="num-btn" name="eig-num" value="8" onclick="digitNumber(this.value, this.className, this.name)">8</button>
+                    <button class="num-btn" name="nin-num" value="9" onclick="digitNumber(this.value, this.className, this.name)">9</button>
+                    <button class="func-btn" name="div-func" value="/" onclick="digitFunc(this.value)">/</button>
                 </div>
                 <div class="row">
-                    <button class="num-btn" name="for-num" value="4" onclick="digit(this.value, this.className, this.name)">4</button>
-                    <button class="num-btn" name="fiv-num" value="5" onclick="digit(this.value, this.className, this.name)">5</button>
-                    <button class="num-btn" name="six-num" value="6" onclick="digit(this.value, this.className, this.name)">6</button>
-                    <button class="func-btn" name="mult-func" value="x" onclick = "digit(this.value, this.className, this.name)">X</button>
+                    <button class="num-btn" name="for-num" value="4" onclick="digitNumber(this.value, this.className, this.name)">4</button>
+                    <button class="num-btn" name="fiv-num" value="5" onclick="digitNumber(this.value, this.className, this.name)">5</button>
+                    <button class="num-btn" name="six-num" value="6" onclick="digitNumber(this.value, this.className, this.name)">6</button>
+                    <button class="func-btn" name="mult-func" value="x" onclick = "digitFunc(this.value)">X</button>
                 </div>
                 <div class="row">
-                    <button class="num-btn" name="one-num" value="1" onclick = "digit(this.value, this.className, this.name)">1</button>
-                    <button class="num-btn" name="two-num" value="2" onclick = "digit(this.value, this.className, this.name)">2</button>
-                    <button class="num-btn" name="thr-num" value="3" onclick = "digit(this.value, this.className, this.name)">3</button>
-                    <button class="func-btn" name="min-func" value="-" onclick = "digit(this.value, this.className, this.name)">-</button>
+                    <button class="num-btn" name="one-num" value="1" onclick = "digitNumber(this.value, this.className, this.name)">1</button>
+                    <button class="num-btn" name="two-num" value="2" onclick = "digitNumber(this.value, this.className, this.name)">2</button>
+                    <button class="num-btn" name="thr-num" value="3" onclick = "digitNumber(this.value, this.className, this.name)">3</button>
+                    <button class="func-btn" name="min-func" value="-" onclick = "digitFunc(this.value)">-</button>
                 </div>
                 <div class="row">
-                    <button class="num-btn" name="zer-num" value="0" onclick = "digit(this.value, this.className, this.name)">0</button>
-                    <button class="num-btn" name="dot-num" value="." onclick = "digit(this.value, this.className, this.name)">.</button>
+                    <button class="num-btn" name="zer-num" value="0" onclick = "digitNumber(this.value, this.className, this.name)">0</button>
+                    <button class="num-btn" name="dot-num" value="." onclick = "digitNumber(this.value, this.className, this.name)">.</button>
                     <button class="eq-btn" name="eq-func" onclick="calculate()">=</button>
-                    <button class="func-btn" name="plus-func" value="+" onclick = "digit(this.value, this.className, this.name)">+</button>
+                    <button class="func-btn" name="plus-func" value="+" onclick = "digitFunc(this.value)">+</button>
                 </div>
         
             </div>
