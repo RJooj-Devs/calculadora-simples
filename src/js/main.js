@@ -13,19 +13,19 @@ let calcs = []
 let currCalc = []
 let values = []
 let operators = []
-
+let q = 0
 
 renderDisplay()
 
 function digitNumber(val, type, name)
 {
-    currCalc.push(val)
-    values.push(val)
+    currCalc.push(Number(val))
+    values.push(Number(val))
     renderDisplay(val)
 }
 function digitFunc(val){
-    calcs.push(Number(values.join('')))
-
+    calcs.push(values.join(''))
+    q++
     if(val != currCalc[currCalc.length-1])
     {
         currCalc.push(val)
@@ -39,6 +39,7 @@ function clear(){
     
     currCalc.splice(currCalc.length-1, 1)
     values.splice(values.length-1, 1)
+
     renderDisplay()
     
 }
@@ -55,20 +56,35 @@ function renderDisplay(val, type){
 }
 function calculate()
 {
-    calcs.push(Number(values.join('')))
-    values.splice(0, values.length)
-    let res
-    let n
-    for(let op in operators)
+    calcs.push(values.join(''))
+ 
+    q++
+    let res = 0
+    for(var i = 0; i < q; i++)
     {
-        switch(operators[op])
-        {
-            case '+':
-                //em construção...
-                n = calcs[op]+1
-                res = calcs[op] + calcs[n]
+        if(calcs[i] != ''){
+            switch(operators[i])
+            {
+
+                case '+':
+                res += Number(calcs[i]) + Number(calcs[i+1])
+                break
+                case 'x':
+                    res += Number(calcs[i])*Number(calcs[i+1])
+                break
+                case '-':
+                    res += Number(calcs[i])-Number(calcs[i+1])
+            }
         }
+        
     }
-   
-    console.log(res)
+    elements.output.innerHTML = res
+    elements.calcDisplay.innerHTML = currCalc.join('')
+    calcs.splice(0, calcs.length)
+    calcs.push(res)
+    currCalc.splice(0, currCalc.length)
+    currCalc.push(res)
+    q = 0
+    
+    renderDisplay()
 }
